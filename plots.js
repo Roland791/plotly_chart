@@ -2,7 +2,7 @@ function init() {
   var selector = d3.select("#selDataset");
 
   d3.json("samples.json").then((data) => {
-    console.log("7");
+    console.log("8");
     var sampleNames = data.names;
     sampleNames.forEach((sample) => {
       selector
@@ -23,11 +23,11 @@ init();
     d3.json("samples.json").then((data) => {
       var metadata = data.metadata;
       var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
-      //var result = resultArray[0];
+      var result = resultArray[0];
       var PANEL = d3.select("#sample-metadata");
   
       PANEL.html("");
-      Object.entries(resultArray).forEach(([key, value]) => {
+      Object.entries(result).forEach(([key, value]) => {
         PANEL.append("h5").text(key[0].toUpperCase() + ": " + key[1] + "\n"); 
       });
     //  PANEL.append("h6").text(result.location);
