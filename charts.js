@@ -1,4 +1,4 @@
-console.log("16");
+console.log("17");
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
@@ -64,15 +64,16 @@ function buildCharts(sample) {
     var buildingArray = sampleData.filter(sampleObj => sampleObj.id == sample);
   // Gauge 1. Create a variable that filters the metadata array for the object with the desired sample number.
 
-
+  var mData = data.metadata;
 
 
     //  5. Create a variable that holds the first sample in the array.
     var result = buildingArray[0];
 
   // Gauge 2. Create a variable that holds the first sample in the metadata array.
+  var resultFreq = mData.filter(freqObject => freqObject.id == sampleID);
+  var freqData = resultFreq[0];
 
-  
 
 
 
@@ -83,7 +84,7 @@ function buildCharts(sample) {
 
 
   // Gauge 3. Create a variable that holds the washing frequency.  
-  
+  var wFreq = freqData.wfreq;
   
   
   
@@ -144,7 +145,7 @@ function buildCharts(sample) {
       {
         domain: { x: [0, 1], y: [0, 1] },
         marker: {size: 28, color:'850000'},
-        value: result.wfreq,
+        value: wfreq,
         title: 'Belly Button Washing Frequency<br> Scrubs per Week',
         titlefont: {family: '"Arial, Helvetica, sans-serif'},
         type: "indicator",
