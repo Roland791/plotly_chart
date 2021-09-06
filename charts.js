@@ -1,4 +1,4 @@
-console.log("18");
+console.log("19");
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
@@ -146,7 +146,7 @@ function buildCharts(sample) {
       {
         domain: { x: [0, 1], y: [0, 1] },
         marker: {size: 28, color:'850000'},
-        value: wfreq,
+        value: wFreq,
         title: 'Belly Button Washing Frequency<br> Scrubs per Week',
         titlefont: {family: '"Arial, Helvetica, sans-serif'},
         type: "indicator",
