@@ -1,4 +1,4 @@
-console.log("2");
+console.log("3");
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
@@ -97,14 +97,17 @@ function buildCharts(sample) {
 
     // 1. Create the trace for the bubble chart.
     var bubbleData = [
-      x= sampleData.samples[0].otu_ids,
-      y= sampleData.samples[0].sample_values,
-      mode= "markers",
-      marker= {
-          size: sampleData.samples[0].sample_values,
-          color: sampleData.samples[0].otu_ids
-      },
-      text=  sampleData.samples[0].otu_labels
+      {
+        x: otu_ids,
+        y: sample_values,
+        text: otu_labels,
+        mode: "markers",
+        marker: {
+          size: sample_values,
+          color: otu_ids,
+          colorscale: "Earth"
+        }
+      }
     ];
 
     // 2. Create the layout for the bubble chart.
