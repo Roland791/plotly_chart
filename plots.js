@@ -27,9 +27,9 @@ init();
       var PANEL = d3.select("#sample-metadata");
   
       PANEL.html("");
-      Object.entries(result).forEach((key) => {   
-        PANEL.append("h5").text(key[0].toUpperCase() + ": " + key[1] + "\n");    
-    });
+      Object.entries(result).forEach(([key, value]) => {
+        PANEL.append("h6").text('${key.toUpperCase()}: ${value}');
+      });
     //  PANEL.append("h6").text(result.location);
     });
   }
