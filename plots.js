@@ -27,8 +27,8 @@ init();
       var PANEL = d3.select("#sample-metadata");
   
       PANEL.html("");
-      Object.entries(data).forEach(([key, value]) => {
-        PANEL.append("h6").text(`${key}:${value}`);
+      Object.entries(result).forEach((key) => {   
+        demographicInfo.append("h5").text(key[0].toUpperCase() + ": " + key[1] + "\n");    
       })
     //  PANEL.append("h6").text(result.location);
     });
