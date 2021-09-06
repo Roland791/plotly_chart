@@ -27,6 +27,9 @@ init();
       var PANEL = d3.select("#sample-metadata");
   
       PANEL.html("");
-      PANEL.append("h6").text(result.location);
+      Object.entries(data).forEach(([key, value]) => {
+        PANEL.append("h6").text(`${key}:${value}`);
+      })
+    //  PANEL.append("h6").text(result.location);
     });
   }
