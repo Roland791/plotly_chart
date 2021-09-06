@@ -2,7 +2,7 @@ function init() {
   var selector = d3.select("#selDataset");
 
   d3.json("samples.json").then((data) => {
-    console.log("1");
+    console.log("2");
     var sampleNames = data.names;
     sampleNames.forEach((sample) => {
       selector
