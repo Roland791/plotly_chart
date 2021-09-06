@@ -1,4 +1,4 @@
-console.log("19");
+console.log("120");
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
@@ -150,7 +150,25 @@ function buildCharts(sample) {
         title: 'Belly Button Washing Frequency<br> Scrubs per Week',
         titlefont: {family: '"Arial, Helvetica, sans-serif'},
         type: "indicator",
-        gauge: { axis: { visible: true, range: [0, 9] } },
+        gauge: {
+          axis: { range: [null, 9], tickwidth: 1, tickcolor: "#000082" },
+          steps: [
+            { range: [0, 1], color: "#fff4ed" },
+            { range: [1, 2], color: "#ffddc6" },
+            { range: [2, 3], color: "#ffc59f" },
+            { range: [3, 4], color: "#ffae78" },
+            { range: [4, 5], color: "#ff9650" },
+            { range: [5, 6], color: "#ff7e29" },
+            { range: [6, 7], color: "#ff6702" },
+            { range: [7, 8], color: "#ed5f00" },
+            { range: [8, 9], color: "#c64800" },
+          ],
+          threshold: {
+            line: { color: "red", width: 4 },
+            thickness: 0.75,
+            value: 490,
+          },
+        },
         mode: "number+gauge"
       }
     ];
