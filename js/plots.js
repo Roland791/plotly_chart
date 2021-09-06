@@ -28,7 +28,7 @@ init();
   
       PANEL.html("");
       Object.entries(resultArray).forEach(([key, value]) => {
-        PANEL.append("h6").text('${key}:${value}'); 
+        PANEL.append("h6").text({key}+":"+{value}); 
       });
     //  PANEL.append("h6").text(result.location);
     });
