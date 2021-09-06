@@ -28,7 +28,7 @@ init();
   
       PANEL.html("");
       Object.entries(result).forEach(([key, value]) => {
-        panelData.append("h6").text(`${key.toUpperCase()}: ${value}`);
+        Panel.append("h6").text(`${key.toUpperCase()}: ${value}`);
       });
     //  PANEL.append("h6").text(result.location);
     });
