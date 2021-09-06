@@ -1,1 +1,2 @@
-# plotly_chart
+Belly Button Biodiversity Contains the complete Module 12. The site can be found at "https://roland791.github.io/plotly_chart/"
+Customizations (Deliverable 4) include a banner image, additional text describing the project, and custom shading of the Gauge graph. 
