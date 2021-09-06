@@ -1,9 +1,3 @@
-function init() {
-  data = [{
-    x: [1, 2, 3, 4, 5],
-    y: [1, 2, 4, 8, 16] }];
-  Plotly.newPlot("plot", data);
-};
 
 d3.selectAll("#dropdownMenu").on("change", updatePlotly);
 function updatePlotly() {
@@ -46,4 +40,3 @@ init();
     });
   }
 
-  
