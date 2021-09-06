@@ -1,4 +1,4 @@
-console.log("17");
+console.log("18");
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
@@ -64,15 +64,16 @@ function buildCharts(sample) {
     var buildingArray = sampleData.filter(sampleObj => sampleObj.id == sample);
   // Gauge 1. Create a variable that filters the metadata array for the object with the desired sample number.
 
-  var mData = data.metadata;
+    var mData = data.metadata;
+    var resultFreq = mData.filter(freqObject => freqObject.id == sample);
 
 
     //  5. Create a variable that holds the first sample in the array.
     var result = buildingArray[0];
 
   // Gauge 2. Create a variable that holds the first sample in the metadata array.
-  var resultFreq = mData.filter(freqObject => freqObject.id == sampleID);
-  var freqData = resultFreq[0];
+  
+    var freqData = resultFreq[0];
 
 
 
