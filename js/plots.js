@@ -27,7 +27,7 @@ init();
       var PANEL = d3.select("#sample-metadata");
   
       PANEL.html("");
-      Object.entries(resultArray).forEach(([key, value]) => {
+      Object.entries(result).forEach(([key, value]) => {
         PANEL.append("h6").text(key[0].toUpperCase() + ": " + key[1] + "\n"); 
       });
     //  PANEL.append("h6").text(result.location);
