@@ -1,4 +1,4 @@
-console.log("14");
+console.log("15");
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
@@ -112,6 +112,7 @@ function buildCharts(sample) {
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
+      title: "Top 10 Bacteria Cultures Found",
       xaxis:{title: "OTU ID"},
       height: 600,
       width: 1000
