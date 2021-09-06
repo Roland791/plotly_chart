@@ -1,4 +1,4 @@
-console.log("3");
+console.log("14");
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
@@ -118,6 +118,6 @@ function buildCharts(sample) {
     };
 
     // 3. Use Plotly to plot the data with the layout.
-    Plotly.newPlot("bubble", data1, layout_2); 
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
   });
 }
