@@ -2,7 +2,7 @@ function init() {
   var selector = d3.select("#selDataset");
 
   d3.json("samples.json").then((data) => {
-    console.log("5");
+    console.log("6");
     var sampleNames = data.names;
     sampleNames.forEach((sample) => {
       selector
@@ -28,7 +28,7 @@ init();
   
       PANEL.html("");
       Object.entries(resultArray).forEach(([key, value]) => {
-        PANEL.append("h6").text('${key}: ${value}'); 
+        PANEL.append("h6").text({key}, {value}); 
       });
     //  PANEL.append("h6").text(result.location);
     });
